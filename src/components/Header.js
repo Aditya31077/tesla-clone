@@ -10,22 +10,25 @@ function Header() {
     const cars=useSelector(selectCars);
     return (
         <Container>
-            <a>
-                <img src="/images/logo.svg"/>
-            </a>
-            <Menu>
+            <Logo>
+                <a><span>tin</span>
+                <span>Ent</span></a>
+                {/* <img src="/images/logo.svg"/> */}
+            </Logo>
+            {/* <Menu>
                 {cars && cars.map((car,index)=>(
                     <a key={index} href="#">{car}</a>
                 ))}
                                
                 
-            </Menu>
+            </Menu> */}
 
             <RightMenu>
-                <a href="#">Shop</a>
-                <a href="#">Tesla Account</a>
-                <CustomMenu onClick={()=>setBurgerStatus(true)}/>
+                <a href="#">home</a>
+                <a href="#">about us</a>
+                <a href="#">contact us</a>
             </RightMenu>
+            {/* <CustomMenu onClick={()=>setBurgerStatus(true)}/>
             <BurgerNav show={burgerStatus}>
                 <CloseWrapper>
                 <CustomClose onClick={()=>setBurgerStatus(false)}/>
@@ -35,13 +38,14 @@ function Header() {
                 ))}
                     
                 <li><a href="#">Existing Inventory</a></li>
+                
                 <li><a href="#">Used Inventory</a></li>
                 <li><a href="#">Trade-In</a></li>
                 <li><a href="#">CyberTruck</a></li>
                 <li><a href="#">Roadster</a></li>
                 <li><a href="#">Charging</a></li>
                 <li><a href="#">Solar Panels</a></li>
-            </BurgerNav>
+            </BurgerNav> */}
         </Container>
     )
 }
@@ -60,6 +64,8 @@ const Container=styled.div`
     left:0;
     right:0;
     z-index:1;
+`
+const Logo=styled.div`
 `
 
 const Menu=styled.div`
@@ -84,6 +90,7 @@ const RightMenu=styled.div`
     display:flex;
     align-items:center;
 a{
+    
     font-weight:600;
     text-transform:uppercase;
     margin-right:10px;
